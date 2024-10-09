@@ -1,12 +1,19 @@
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Products from './components/Products/Products';
 
 function App() {
+  const [productsInfo, setProductsInfo] = useState([]);
 
   return (
     <>
-     <h1>Storage</h1>
+      <Products
+        productsInfo={productsInfo}
+        setProductsInfo={setProductsInfo}
+      ></Products>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
