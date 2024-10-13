@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
 const Products = ({setProductsInfo , productsInfo }) => {
 
-    const [addProducts, setAddProducts] = useState([])
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -20,8 +19,6 @@ const Products = ({setProductsInfo , productsInfo }) => {
                 <ProductCard 
                 key={product.id} 
                 product={product}
-                addProducts={addProducts}
-                setAddProducts={setAddProducts}
                 ></ProductCard>)
             }
           </div>
